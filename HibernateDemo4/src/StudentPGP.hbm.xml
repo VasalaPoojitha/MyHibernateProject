@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+	<class name="model.StudentPGP" table="StudentPGP">
+		<id name="studentId">
+			<generator class="assigned"></generator>
+		</id>
+		<property name="studentName" column="studentName"></property>
+		<property name="emailId" column="emailId"></property>
+		
+		<component name="regular" class="model.Marks">
+			<property name="Module1" column="regularModule1" type="int"></property>
+			<property name="Module2" column="regulareModule2" type="int"></property>
+			<property name="Module3" column="regularModule3" type="int"></property>
+		</component>
+		
+		<component name="supply" class="model.Marks">
+			<property name="Module1" column="supplyModule1" type="int"></property>
+			<property name="Module2" column="supplyModule2" type="int"></property>
+			<property name="Module3" column="supplyModule3" type="int"></property>
+		</component>
+			
+	</class>
+</hibernate-mapping>
